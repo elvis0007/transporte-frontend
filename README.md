@@ -21,18 +21,30 @@ Para visualizar el siguiente diagrama correctamente:
 2. Instala la extensión **Markdown Preview Mermaid Support**.  
 3. O visita 👉 [https://mermaid.live/](https://mermaid.live/) y pega el código del diagrama.
 
+
 ```mermaid
 gitGraph
     commit id:"Init"
     branch develop
     commit id:"Dev1"
+    commit id:"Dev2"
     checkout main
     commit id:"Main1"
     merge develop id:"MergeDev"
-    
-    branch feature
-    checkout feature
-    commit id:"Feat1"
-    commit id:"Feat2"
+
+    branch feature/login
+    checkout feature/login
+    commit id:"Login1"
+    commit id:"Login2"
+    checkout develop
+    merge feature/login id:"MergeLogin"
+
+    branch feature/venta-boletos
+    checkout feature/venta-boletos
+    commit id:"Venta1"
+    commit id:"Venta2"
+    checkout develop
+    merge feature/venta-boletos id:"MergeVenta"
+
     checkout main
-    merge feature id:"MergeFeat"
+    merge develop id:"Release-v1.0"
