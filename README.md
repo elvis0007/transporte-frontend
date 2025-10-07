@@ -1,3 +1,31 @@
+gitGraph
+    commit id:"Init"
+    branch develop
+    commit id:"Dev1"
+    commit id:"Dev2"
+    checkout main
+    commit id:"Main1"
+    merge develop id:"MergeDev"
+
+    branch feature/login
+    checkout feature/login
+    commit id:"Login1"
+    commit id:"Login2"
+    checkout develop
+    merge feature/login id:"MergeLogin"
+
+    branch feature/venta-boletos
+    checkout feature/venta-boletos
+    commit id:"Venta1"
+    commit id:"Venta2"
+    checkout develop
+    merge feature/venta-boletos id:"MergeVenta"
+
+    checkout main
+    merge develop id:"Release-v1.0"
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
